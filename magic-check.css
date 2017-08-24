@@ -1,0 +1,87 @@
+@keyframes hover-color {
+  from {
+    border-color: #c0c0c0; }
+  to {
+    border-color: #3e97eb; } }
+.opt{height:30px;line-height:24px}
+
+.magic-checkbox {
+  position: absolute;
+  display: none; }
+
+.magic-checkbox[disabled] {
+  cursor: not-allowed; }
+
+.magic-checkbox + label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  vertical-align: middle; }
+  
+  .magic-checkbox + label:hover:before {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: hover-color; }
+
+  .magic-checkbox + label:before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    content: '';
+    border: 1px solid  	#D8BFD8; }
+
+  .magic-checkbox + label:after {
+    position: absolute;
+    display: none;
+    content: ''; }
+
+.magic-checkbox[disabled] + label {
+  cursor: not-allowed;
+  color: #e4e4e4; }
+
+  .magic-checkbox[disabled] + label:hover,
+  .magic-checkbox[disabled] + label:before,
+  .magic-checkbox[disabled] + label:after {
+    cursor: not-allowed; }
+
+  .magic-checkbox[disabled] + label:hover:before {
+    border: 1px solid #e4e4e4;
+    animation-name: none; }
+
+  .magic-checkbox[disabled] + label:before {
+    border-color: #e4e4e4; }
+
+.magic-checkbox:checked + label:before {
+  animation-name: none; }
+
+.magic-checkbox:checked + label:after {
+  display: block; }
+
+
+.magic-checkbox + label:before {
+  border-radius: 3px; }
+
+.magic-checkbox + label:after {
+  top: 3px;
+  left: 9px;
+  box-sizing: border-box;
+  width: 6px;
+  height: 12px;
+  transform: rotate(45deg);
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  border-top: 0;
+  border-left: 0; }
+
+.magic-checkbox:checked + label:before {
+  border: #3e97eb;
+  background: #3e97eb; }
+
+.magic-checkbox:checked[disabled] + label:before {
+  border: #c9e2f9;
+  background: #c9e2f9; }

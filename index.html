@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>工具条</title>
+<meta name="keywords" content="css" />
+
+<link rel="stylesheet" type="text/css" href="magic-check.css">
+<link rel="stylesheet" type="text/css" href="tool.css">
+    <script src="jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+				$(".gd").width(25);
+                $(".hd").hover(function() {
+                    $(this).find("h3").show(); //top :-75
+					$(this).css("background-image","url(选择按钮底图.png)");
+                }, function() {
+                    $(this).find("h3").hide();
+					$(this).css("background-image","url(按钮底图.png)");
+                });
+		
+		});
+
+    </script>
+
+</head>
+
+<body>
+
+
+<div id="main">
+
+
+       <ul class="menu" style="">
+	   		<li class="gd">
+			<a></a>
+			<font  >&nbsp</font>
+            </li>
+
+            <li class="hd">
+                <a style="background: url(排污口.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font  color="white">排污口</font>
+                <h3>
+                    <input id="checkAll" class="magic-checkbox" type="checkbox"  onclick="selectAll(this)"/><label for="checkAll">全选</label>
+                    <input id="SHWS" class="magic-checkbox" name="PWK"  type="checkbox" onclick="addPWK(this)" /><label for="SHWS">生活污水</label>
+                    <input id="SCWS" class="magic-checkbox" name="PWK"  type="checkbox" onclick="addPWK(this)"/><label for="SCWS">生产污水</label>
+                    <input id="QYWS" class="magic-checkbox" name="PWK"  type="checkbox" onclick="addPWK(this)"/><label for="QYWS">企业污水</label>
+                    <input id="YLFS" class="magic-checkbox" name="PWK"  type="checkbox" onclick="addPWK(this)"/><label for="YLFS">医疗废水</label>
+                    <input id="YS"   class="magic-checkbox" name="PWK"  type="checkbox" onclick="addPWK(this)"/><label for="YS">雨水</label>
+                    <input id="YWHH" class="magic-checkbox" name="PWK"  type="checkbox" onclick="addPWK(this)"/><label for="YWHH">雨污混合</label>
+                </h3>
+            </li>
+            <li class="hd">
+                <a style="background: url(视频监控.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font style="color:white;">视频监控</font>
+				<h3>
+                    <input id="SXT1" class="magic-checkbox" name="SXT"  type="checkbox" onclick="addCamera(this)"/><label for="SXT1">摄像头</label>
+                </h3>
+            </li>
+            <li class="hd">
+                <a style="background: url(事件.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font  style="color:white;">事件</font>
+				<h3>
+                    <input id="Untreated" class="magic-checkbox"  name="EVENT"  type="checkbox" onclick="addEvent(this)"/><label for="Untreated">未处理</label>
+                    <input id="Processing" class="magic-checkbox" name="EVENT"  type="checkbox" onclick="addEvent(this)"/><label for="Processing">处理中</label>
+                    <input id="Completed" class="magic-checkbox"  name="EVENT"  type="checkbox" onclick="addEvent(this)"/><label for="Completed">已处理</label>
+                </h3>
+            </li>
+			<li class="hd">
+                <a style="background: url(公示牌.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font style="color:white;">公示牌</font>
+				<h3>
+
+                </h3>
+            </li>
+			<li class="hd">
+                <a style="background: url(重点污染源.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font  color="white">重点污染源</font>
+				<h3>
+
+                </h3>
+            </li>
+			<li class="hd">
+                <a style="background: url(随手拍.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font  style="color:white;">随手拍</font>
+				<h3>
+
+                </h3>
+            </li>
+			<li class="hd">
+                <a style="background: url(水质.png) no-repeat center center;background-size: 40px 40px;"></a>
+				<font style="color:white;">水质</font>
+				<h3>
+
+                </h3>
+            </li>
+	   		<li class="gd">
+			<a></a>
+			<font >&nbsp</font>
+            </li>			
+        </ul>
+			
+			<div class="opt">
+				<input class="magic-checkbox" type="checkbox"  id="c3">
+				<label for="c3">Normal</label>
+			</div>
+			
+			
+			
+</div>
+
+</body>
+</html>
